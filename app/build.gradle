@@ -3,3 +3,14 @@ dependencies {
     implementation 'org.videolan.android:libvlc-all:3.5.2'
     // ...other dependencies
 }
+
+android {
+    // ... your existing android block
+    defaultConfig {
+        // ... other config
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+        }
+    }
+    // ... rest of your android block
+}
